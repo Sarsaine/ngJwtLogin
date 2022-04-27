@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Ionic test app
+    </ion-title>
+    <ion-buttons slot="primary">
+      <!-- TODO: Move this to a component -->
+      <ion-button (click)="onLogin()">
+        {{ !(loginService.isLogged$ | async) ? "Login" : "Logout" }}
+        <ion-icon slot="end" name="person-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

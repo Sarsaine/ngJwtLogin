@@ -1,0 +1,20 @@
+:host {
+  form {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+
+    fieldset {
+      border-radius: 5px;
+      box-shadow: 3px 1px 10px gray;
+      border: none;
+      padding: 10px 30px;
+
+      ion-button[type="submit"] {
+        margin: 15px auto auto;
+        display: block;
+        max-width: 150px;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<form (ngSubmit)="login()" [formGroup]="form">
+  <fieldset>
+    <ion-item>
+      <ion-label for="login">Login :</ion-label>
+      <ion-input id="login" type="text" name="login" formControlName="login"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label for="password">Password :</ion-label>
+      <ion-input id="password" type="password" name="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!form.valid || (loginService.isLoading$ | async)">
+      <ion-spinner *ngIf="loginService.isLoading$ | async"></ion-spinner>
+      <ng-container *ngIf="!(loginService.isLoading$ | async)">
+        Login
+      </ng-container>
+    </ion-button>
+  </fieldset>
+</form>
