@@ -1,0 +1,7 @@
+{
+  "name": "ngJwtLogin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
